@@ -14,6 +14,8 @@ const app = express();
 const checkJwt = auth({
   audience: process.env.AUDIENCE,
   issuerBaseURL: process.env.ISSUER_BASE_URL,
+  issuer: process.env.ISSUER,
+  secret: process.env.SECRET,
 });
 
 app.use(express.json());
